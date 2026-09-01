@@ -153,6 +153,38 @@
     .success-msg { display: none; font-size: 14px; color: #1D9E75; font-weight: 500; margin-bottom: 48px; }
     .success-msg.active { display: block; }
 
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 360px;
+      margin: 0 auto 40px;
+    }
+    .step-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(29,158,117,0.15);
+      border: 0.5px solid rgba(29,158,117,0.3);
+      color: #1D9E75;
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step-text {
+      font-size: 15px;
+      color: rgba(225,245,238,0.75);
+      text-align: left;
+    }
+
     .pillars {
       display: flex;
       align-items: center;
@@ -322,7 +354,20 @@
 
       <p class="subline" style="margin-top: 0; margin-bottom: 56px;"><strong style="color: #E1F5EE; font-weight: 500;">No Insurance Needed.</strong> No shame. Just mental health care, whenever you need it.</p>
 
-      <p class="subline" style="margin-bottom: 40px;">1. You sign up &nbsp;·&nbsp; 2. Your people give &nbsp;·&nbsp; 3. You get to spend it on mental health help</p>
+      <div class="steps-list">
+        <div class="step-row">
+          <span class="step-num">1</span>
+          <span class="step-text">You sign up</span>
+        </div>
+        <div class="step-row">
+          <span class="step-num">2</span>
+          <span class="step-text">Your people give</span>
+        </div>
+        <div class="step-row">
+          <span class="step-num">3</span>
+          <span class="step-text">You get to spend it on mental health help</span>
+        </div>
+      </div>
 
       <form class="form-wrap" onsubmit="handleSubmit(event)">
         <input class="email-input" type="email" placeholder="Your email address" required />
